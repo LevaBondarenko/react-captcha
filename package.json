@@ -1,24 +1,26 @@
 {
   "name": "acms-react-captcha",
-  "version": "1.0.0",
-  "description": "Test",
+  "email": "lion.bond93@gmail.com",
+  "version": "1.0.3",
+  "description": "Very simple component for react captcha",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LevaBondarenko/react-captcha.git"
+    "url": "git+https://github.com/levabond/react-captcha.git"
   },
   "maintainers": [
     {
-      "name": "levabond"
+      "name": "levabond",
+      "email": "lion.bond93@gmail.com"
     }
   ],
   "author": "levabond",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LevaBondarenko/react-captcha/issues"
+    "url": "https://github.com/levabond/react-captcha/issues"
   },
-  "homepage": "https://github.com/LevaBondarenko/react-captcha#readme"
+  "homepage": "https://github.com/levabond/react-captcha#readme"
 }

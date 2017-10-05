@@ -1,20 +1,19 @@
-# ACMS:react-captcha
-###**Sreen**
-
+# acms-react-captcha
+## Very simple component for react
 
 ###**Install**
->$ npm install react-captcha --save
+>$ npm install acms-react-captcha --save
 
 ###**Example usage**
 
 ```jsx
 
-<Captcha
+<ReactCaptcha
 	sitekey = 'your_sitekey'
 	lang = 'en'
 	theme = 'light'
 	type = 'image'
-	callback = {(value) => console.log(value)}/>
+	callback = {() => {}}/>
 
 ```
 HELP:  https://developers.google.com/recaptcha/intro
