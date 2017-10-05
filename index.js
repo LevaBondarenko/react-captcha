@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
+var React = require('react');
+var PropTypes = require('prop-types');
 
-class Captcha extends Component {
+class Captcha extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -9,15 +9,16 @@ class Captcha extends Component {
       scriptLoadError: false
     };
 
-    this.getScriptURL = `https://www.google.com/recaptcha/api.js?
-    onload=onloadCallback&hl='${
-    props.lang}'&render=explicit&rnd='${Math.random()}`;
+    this.getScriptURL = 'https://www.google.com/recaptcha/api.js?onload=onloadCallback&hl='+ props.lang +'&render=explicit&rnd='+Math.random();
   }
 
   componentDidMount() {
-    const {sitekey, theme, type, callback} = this.props;
+    const sitekey = this.props.sitekey;
+    const theme = this.props.theme;
+    const type = this.props.type;
+    const callback = this.props.callback;
 
-    window.onloadCallBack = () => {
+    window.onloadCallBack= function() {
       grecaptcha.render('captcha', {
         sitekey: sitekey,
         callback: callback,
@@ -36,20 +37,19 @@ class Captcha extends Component {
   };
 
   render() {
-    return (<div className='g-recaptcha' id='captcha'></div>);
+    return React.createElement('div', {class: 'g-recaptcha', id: 'captcha'}, "Save")
   }
 }
-
-Captcha.propTypes = {
+PropTypes.propTypes = {
   sitekey: PropTypes.func.isRequired,
   callback: PropTypes.func.isRequired,
   theme: PropTypes.string,
   type: PropTypes.string
 };
 
-Captcha.defaultProps = {
+PropTypes.defaultProps = {
   theme: 'light',
   type: 'image'
 };
 
-export default Captcha;
+module.export = Captcha;
