@@ -1,7 +1,7 @@
 {
   "name": "acms-react-captcha",
   "email": "lion.bond93@gmail.com",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Very simple component for react captcha",
   "main": "index.js",
   "scripts": {

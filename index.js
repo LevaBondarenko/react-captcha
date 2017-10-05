@@ -2,18 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 class Captcha extends Component {
-  static propTypes = {
-    sitekey: PropTypes.func.isRequired,
-    callback: PropTypes.func.isRequired,
-    theme: PropTypes.string,
-    type: PropTypes.string
-  };
-
-  static defaultProps = {
-    theme: 'light',
-    type: 'image'
-  };
-
   constructor(props) {
     super(props);
     this.state = {
@@ -39,11 +27,11 @@ class Captcha extends Component {
     };
   }
 
-  onScriptLoaded = () => {
+  onScriptLoaded() {
     this.setState({scriptLoading: false});
   };
 
-  onScriptError = () => {
+  onScriptError() {
     this.setState({scriptLoading: false, scriptLoadError: true});
   };
 
@@ -51,5 +39,17 @@ class Captcha extends Component {
     return (<div className='g-recaptcha' id='captcha'></div>);
   }
 }
+
+Captcha.propTypes = {
+  sitekey: PropTypes.func.isRequired,
+  callback: PropTypes.func.isRequired,
+  theme: PropTypes.string,
+  type: PropTypes.string
+};
+
+Captcha.defaultProps = {
+  theme: 'light',
+  type: 'image'
+};
 
 export default Captcha;
