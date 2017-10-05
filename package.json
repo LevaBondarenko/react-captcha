@@ -1,5 +1,5 @@
 {
-  "name": "react-captcha",
+  "name": "acms-react-captcha",
   "version": "1.0.0",
   "description": "Test",
   "main": "index.js",
@@ -10,7 +10,12 @@
     "type": "git",
     "url": "git+https://github.com/LevaBondarenko/react-captcha.git"
   },
-  "author": "Lev Bondarenko",
+  "maintainers": [
+    {
+      "name": "levabond"
+    }
+  ],
+  "author": "levabond",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/LevaBondarenko/react-captcha/issues"
