@@ -52,4 +52,4 @@ PropTypes.defaultProps = {
   type: 'image'
 };
 
-module.export = Captcha;
+export default Captcha;
