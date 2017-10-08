@@ -18,7 +18,7 @@ class Captcha extends React.Component {
     const type = this.props.type;
     const callback = this.props.callback;
 
-    window.onloadCallBack= function() {
+    window.onloadCallBack = () => {
       grecaptcha.render('captcha', {
         sitekey: sitekey,
         callback: callback,
@@ -28,16 +28,16 @@ class Captcha extends React.Component {
     };
   }
 
-  onScriptLoaded() {
+  onScriptLoaded = () => {
     this.setState({scriptLoading: false});
   };
 
-  onScriptError() {
+  onScriptError = () => {
     this.setState({scriptLoading: false, scriptLoadError: true});
   };
 
   render() {
-    return React.createElement('div', {class: 'g-recaptcha', id: 'captcha'}, "Save")
+    return React.createElement('div', {className: 'g-recaptcha', id: 'captcha'}, "Save")
   }
 }
 PropTypes.propTypes = {
